@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "afb27fc2-1f88-4d8c-b67d-8bd3bd86bbb2",
+		"name": "MovieColab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "List(GET) and Create(POST) Projects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMTc5OTQ5LCJqdGkiOiJhOGEzZmY1OTc1NzM0OTZjOWQ0NmM0NjcwMGYyOWE5OCIsInVzZXJfaWQiOiJmMWU4ODZkNy1mZjBjLTQ2MzktOWRhYS1jYWNkZTZhNzI5ZjUiLCJhdWQiOltdfQ.DJyPyXAWPHK_litrB94zAybUCf4uVJZuI8XannXFkslXTe1xEGepVcG9u0XamHRFkEedi1JCFxA9iG_4nx4V4hVtO-2W6_zX3Ub4b_VDvOXJSKUkuei5aI6REsMdWigOKyj3G8uMuAn6cSs65ckXZ4i5d2L7PWw5zf2Oza8Gcm58LFy7GgH8TlOl1G_fK5P3-9y4M-vam2Uzrt6Dj3WebpwOVOURC2NXAAkR8zR2_z4tZ58g9ayv4oxGhLSpmW_Zb6I9PH4NUDIq6f9jmftSppCFOSJmokZ5c9QErWzi_zr1EXvoFpYOTh5Mv9F5lWll_H4I2wliWc_Gn4buU-rD6N7mENk1d60rb-SQnoYks-ToLkCigQAaW3Vg-EwmE_W4zNAbc0ZZUbE1juZ_BD5l2HExKcri-TKLu2er60J7rhONkOgggq-erf9iEjjDWhxvIOqvtqZnFXdGYB2TV2jVmyvl8YfrcrQ-OF6emeGvvqk8PJENPGFR7B2GNsqMk19-smexTqtuGlMA2P-zylZItysFwtdW1MqgMk1IRSbADcE_oQCjc7k6jqKith2ZB8hfOvfUUgP7AZjxZArpXD3dnvDQi-jlPFnBB13mQ6EDf-6Wvp5ApJ3skjcJKDo2IxhUXGuibjnawG6AQSl5A2zT5NfAaGMh0zJTkV-CaBXzQgw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test-Project-2\",\r\n    \"abbreviation\": \"TP2\",\r\n    \"admin_users\": [\r\n        \"f1e886d7-ff0c-4639-9daa-cacde6a729f5\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/project/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/project/14/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project",
+								"14",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMTgwNzE1LCJqdGkiOiJjNjg3YjI4NmMwNTQ0YzE5YTg0OTU4ZWZkOTljM2Q4MCIsInVzZXJfaWQiOiJmMWU4ODZkNy1mZjBjLTQ2MzktOWRhYS1jYWNkZTZhNzI5ZjUiLCJhdWQiOltdfQ.pgvQrD3xkF-AS-S0pLJLMBTlLMvNAugCJnWwZYNlg9rFff9hGzlRArN4Ner2JKK5k87ZrMhWV349VZxC2DUbZo0_Xsx-YPfwFw0GK0_DKb3uc1YqfqLJNpK5H-zXYax6ZuQ_feFsCKgAqqSRrmks7PK-TU2TuEPhIGe0jYxBsDvkd6Zh6Snf7v5HTftDwTBJSh2umtl9v1av9P_xc8jft4yNLxG0R6ufvSDI-4PCNtiBRneuheOQtBagLkjb_a_tPlAM3zu8xKEcbET85NkUfCGblbhSanxiRJl4M52eDWBg_0PMlJSATvzpGMnfB4RbbZYWp2Uvlz-k5pQ6cZ5cdUT-hXWDOul0y2n8HTA8Z7ynDRw8kiQbUYtc8MF59LtvNceX_V9s9xLr34VYSBxsb6sINIErokedp_a3QHu4a3Ii62dErilG_C7YUgNGHJlAoIOQ-gFRxrUqa74TQUXKsqcWn9MwFLW3Mno4GPUjGUdrPcahINO5nsx8xL3T6IJbE18GFpAuuEeCdlWL6Z1k14dycRnB5ffsk5yOW537uVZF3RR9IoTVt3W71j3gU8mXBgGaQd67lJKFdngYAQrlJyBektkEk_pKgFoSU4icqt74C4-_WdLHbI1U5igbOyFcbDq7WUyhkgYLyfNC3Jry6xTUaNWuyD9MxwSvL10yVzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test-Project-3\",\r\n    \"status\":0,\r\n    \"abbreviation\":\"TP3\",\r\n    \"admin_users\": [\r\n        \"af0e6f8c-a572-4469-835b-b092887afe86\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/project/3/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMTgwNzE1LCJqdGkiOiJjNjg3YjI4NmMwNTQ0YzE5YTg0OTU4ZWZkOTljM2Q4MCIsInVzZXJfaWQiOiJmMWU4ODZkNy1mZjBjLTQ2MzktOWRhYS1jYWNkZTZhNzI5ZjUiLCJhdWQiOltdfQ.pgvQrD3xkF-AS-S0pLJLMBTlLMvNAugCJnWwZYNlg9rFff9hGzlRArN4Ner2JKK5k87ZrMhWV349VZxC2DUbZo0_Xsx-YPfwFw0GK0_DKb3uc1YqfqLJNpK5H-zXYax6ZuQ_feFsCKgAqqSRrmks7PK-TU2TuEPhIGe0jYxBsDvkd6Zh6Snf7v5HTftDwTBJSh2umtl9v1av9P_xc8jft4yNLxG0R6ufvSDI-4PCNtiBRneuheOQtBagLkjb_a_tPlAM3zu8xKEcbET85NkUfCGblbhSanxiRJl4M52eDWBg_0PMlJSATvzpGMnfB4RbbZYWp2Uvlz-k5pQ6cZ5cdUT-hXWDOul0y2n8HTA8Z7ynDRw8kiQbUYtc8MF59LtvNceX_V9s9xLr34VYSBxsb6sINIErokedp_a3QHu4a3Ii62dErilG_C7YUgNGHJlAoIOQ-gFRxrUqa74TQUXKsqcWn9MwFLW3Mno4GPUjGUdrPcahINO5nsx8xL3T6IJbE18GFpAuuEeCdlWL6Z1k14dycRnB5ffsk5yOW537uVZF3RR9IoTVt3W71j3gU8mXBgGaQd67lJKFdngYAQrlJyBektkEk_pKgFoSU4icqt74C4-_WdLHbI1U5igbOyFcbDq7WUyhkgYLyfNC3Jry6xTUaNWuyD9MxwSvL10yVzM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/project/4/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"project",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "List(GET) and Create(POST) Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test-dept1\",\r\n    \"description\": \"Testing APIs\",\r\n    \"project\": 3,\r\n    \"admin_user\":\"f1e886d7-ff0c-4639-9daa-cacde6a729f5\",\r\n    \"users\":[\r\n        {\r\n            \"email\":\"superuser@vigastudios.com\",\r\n            \"first_name\":\"Super user\"\r\n        }\r\n    ]    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Department Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/14/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"14",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test-dept1-update-final\",\r\n    \"description\": \"Testing APIs\",\r\n    \"project\": 3,\r\n    \"admin_user\":\"f1e886d7-ff0c-4639-9daa-cacde6a729f5\",\r\n    \"users\":[\r\n        {\r\n            \"email\":\"superuser@vigamoviecollab.com\"\r\n        }\r\n    ]    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/14/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"14",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/department/12/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"12",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Phase",
+			"item": [
+				{
+					"name": "List(GET) and Create(POST) Phase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test-Phase\",\r\n    \"description\": \"Testing this phase to phase the testing in testing phase\",\r\n    \"color\": \"Decolor\",\r\n    \"dept\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/phase/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phase",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Phase Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/phase/2/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phase",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Phase",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test-Phase-2-final\",\r\n    \"description\": \"Testing this phase to phase the testing in testing phase - Not again - once again\",\r\n    \"color\": \"Decolor\",\r\n    \"dept\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/phase/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phase",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Phase",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/phase/2/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phase",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User retreive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMTc4NjYwLCJqdGkiOiI5NTZjNjBiNjFhMTQ0MjBlYjQxNjg2Y2UxMWVjMjhmNyIsInVzZXJfaWQiOiJmMWU4ODZkNy1mZjBjLTQ2MzktOWRhYS1jYWNkZTZhNzI5ZjUiLCJhdWQiOltdfQ.SyHBXIjIdRN0MxGXD6K7XOFSCyvma71UCcR48eoeru6Dyh0jhnqtOF9AxGea8xQx8tA4cNaGHAZOvzdIctHO8lOCD_NUirCuWRyHEIywv5weI0_kMPkmm7L5h2zZi9HRgTbgLmZtgF_teUlOOq1_7ZU7HG34yUsLiItGbf7n1YskugQzP2wFqRn-ds4O3LFnwHdUF-A1XihV46CpOaAojSPrPhhOJ6Qyu-heC_Ruml7Zey7w09SgHkzGL4ioaazbVppQRwK-SFt6frnLa_AjzcodDN6et31NjqhwpGMe-9OsB6KnuoKuotqP-KBCTQwySdaiyEsssq5Z6f-O8Z5IGZwe_e6F7o3FXAbmYcIYTJfskpSNqgRuUY3gtJxTD1nXzxadHHcNDCXEAZbDWloK0S_jpcJ4VI6cWZrTGBpqC7PO49OGqlzpJOih2e3hdKGthi_UZORs3wF1NwlLPa03-Wyt5-xzOBABNRE19TKL7I-2534SNYlaBQtjcSd-g9flRoIhJY6UgjcpeB0GIcNemfKnt3tubCrdrfeDU_rpfQZNc9-3v0Cyr0EZ6L_ivLOoAXXInEBfcqH7fkBDV6w3R8w4l_cqtmAXzUFqO3ueQUj7NhrWZOlQ4Kzli9qiPWy0MNVZJXPKHx9VORNuQwkcHk6B0qywVSFMz0qCXrfzsOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/f1e886d7-ff0c-4639-9daa-cacde6a729f5/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"f1e886d7-ff0c-4639-9daa-cacde6a729f5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMTU5OTMzLCJqdGkiOiIxNDFiYjZkZmE1MzE0MGVlODQ3MzZmNGNkZjlhMGVjNSIsInVzZXJfaWQiOiJmMWU4ODZkNy1mZjBjLTQ2MzktOWRhYS1jYWNkZTZhNzI5ZjUiLCJhdWQiOltdfQ.a10FB5KTBqIxxBzdv_EJYYFdDnMxROEIaK7Y7FPlyIAxLK5G1j9lAMtbEqjCUSmqS0x07BEcMOCHfl_kDyF2-s49A_BEPcsVM6jV-xBE1JS4opM186EJWyPjQvvqetX7lyBJYsAPJFdjfghlDhifgaeTmWwf9bJ78VFLelGJH2HD67e1_9qGoIBmdfx2gfuyZwIAO2N3cu4QXN0K9hehkfBLFnOpZXLCxL98zgCwI1_Vap1TCTcBZ3N6R1gnHMZcfUvrGzWj3t2Mqbvvup4akSoTZwnR1KzsaDwRwyMiNnAamPGvvpQ5oQa7AVnAQZ9UPhpTXDWTSQi-G4undO1sC6iPg4OyAxT2JO1ewaOAWZ8d1vP9Jby-pUR3ZtxpNU_Da9O33uosFO8w5EesJ902I_nukUs8iTctkh2yC6KDGqHmbUiKVIpKCJJqo5IpcufDoXKbQkksLVJOX-RF2BMXcOp0X94-CBOYiKXJfzbJjljaulTJ4PTWSOvqxnzh_YFJXOQ7NiBS-1gWeAaoftln0opui2ri0rmGNVeNzH-YfM_dV2RYL0wTL6CJEGJdwWNBKwz1ZMZZwrFnoERd0ErTbyKmSUt75kvTr5G7juzmGDBPn85R9PsVMoFM3F5WGO1K_FlGv01l3ATqldjD_rKvhFgskNtBdYeTUhTemiUaNrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test1@vigastudios.com\",\r\n    \"first_name\":\"Test1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/create/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwttoken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0ee9f893-ab14-47a7-9625-403a2eb1f27a",
+				"type": "text/javascript",
+				"exec": [
+					"var authServiceUrl = pm.environment.get('authService');",
+					"var gatewayBaseUrl = pm.environment.get('gatewayBaseUrl');",
+					"var username = pm.environment.get('email');",
+					"var password = pm.environment.get('password');",
+					"",
+					"var sdk = require('postman-collection');",
+					"",
+					"var isValidTokenRequest = new sdk.Request({",
+					"    url: gatewayBaseUrl + \"/project/\", // Use an endpoint that requires being authenticated",
+					"    method: 'GET',",
+					"    header: [",
+					"        new sdk.Header({",
+					"            key: 'content-type',",
+					"            value: 'application/json',",
+					"        }),",
+					"        new sdk.Header({",
+					"            key: 'acccept',",
+					"            value: 'application/json',",
+					"        }),",
+					"        new sdk.Header({",
+					"            key: 'Authorization',",
+					"            value: 'Bearer ' + pm.globals.get(\"jwttoken\"),",
+					"        }),",
+					"    ]",
+					"});",
+					"",
+					"pm.sendRequest(isValidTokenRequest, function (err, response) {",
+					"    if (response.code === 401) {",
+					"        refreshToken();",
+					"    }",
+					"});",
+					"",
+					"function refreshToken() {",
+					"    var tokenRequest = new sdk.Request({",
+					"    url: authServiceUrl,",
+					"    method: 'POST',",
+					"    header: [",
+					"        new sdk.Header({",
+					"            key: 'content-type',",
+					"            value: 'application/json'",
+					"        }),",
+					"        new sdk.Header({",
+					"            key: 'acccept',",
+					"            value: 'application/json'",
+					"        }),",
+					"    ],",
+					"    body: {",
+					"        mode: 'raw',",
+					"        raw: JSON.stringify({",
+					"            email: username,",
+					"            password: password",
+					"        })",
+					"    } ",
+					"  });",
+					"",
+					"  pm.sendRequest(tokenRequest, function (err, response) {",
+					"      if (err) {",
+					"          throw err;",
+					"      }",
+					"      ",
+					"      if (response.code !== 200) {",
+					"          throw new Error('Could not log in.');",
+					"      }",
+					"      ",
+					"      pm.globals.set(\"jwttoken\", response.json().access);",
+					"      console.log(`New token has been set: ${response.json().access}`);",
+					"    //   console.log(`Jwt currcvalue: ${pm.globals.get}`);",
+					"  });",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a64dc718-4436-4f77-a8aa-346aea9304e5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "83f00a49-1d57-4ddf-ae6b-956c4b2b34ff",
+			"key": "url",
+			"value": "localhost:8000"
+		},
+		{
+			"id": "1b7ab0a3-b8cb-4c6f-9972-ef6283e06c02",
+			"key": "jwttoken",
+			"value": "",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}
